@@ -25,6 +25,8 @@ jobs:
 services:
 - docker
 before_install:
+- ping -c 5 rubygems.org
+- ping -c 5 8.8.8.8
 - gem install asciidoctor
 script:
 - "./.travis/build.sh"
